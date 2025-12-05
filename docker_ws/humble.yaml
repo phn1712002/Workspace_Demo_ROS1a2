@@ -1,0 +1,21 @@
+services:
+  ros2-humble-vnc:
+    image: ghcr.io/tiryoh/ros2-desktop-vnc:humble
+    container_name: ros2_humble_vnc
+    privileged: true
+
+    shm_size: "512m"
+    security_opt:
+      - seccomp=unconfined
+
+    ports:
+      - "6080:80"
+
+    volumes:
+      # Mount thư mục chứa docker-compose.yaml
+      - ./:/workspace
+
+    devices:
+      - /dev/bus/usb:/dev/bus/usb
+
+    restart: unless-stopped

@@ -1,0 +1,21 @@
+services:
+  ros-noetic-vnc:
+    image: ghcr.io/tiryoh/ros-desktop-vnc:noetic
+    container_name: ros_noetic_vnc
+    privileged: true
+
+    shm_size: "512m"
+    security_opt:
+      - seccomp=unconfined
+
+    ports:
+      - "6081:80"
+
+    volumes:
+      # Mount thư mục chứa docker-compose.yaml
+      - ./:/workspace
+
+    devices:
+      - /dev/bus/usb:/dev/bus/usb
+
+    restart: unless-stopped
