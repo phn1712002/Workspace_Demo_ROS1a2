@@ -12,6 +12,8 @@ Workspace mẫu này được thiết kế để hỗ trợ phát triển ứng 
 ├── colcon_ws/          # Workspace ROS2 (Colcon)  
 │   └── src/            # Chứa các package ROS2
 ├── simulation_ws/      # Workspace cho mô phỏng
+├── docker_ws           # Workspace nghiên cứu cho các tệp docker
+├── rules_ws            # Workspace nghiên cứu các rules cho clinerules
 ├── firmware_ws/        # Workspace cho mã nguồn MCU
 ├── ui_ws/              # Workspace cho giao diện người dùng
 ├── mcad_ws/            # Workspace cho liên quan cơ khí 3D, 2D
