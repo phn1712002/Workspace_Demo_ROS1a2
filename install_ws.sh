@@ -1,4 +1,5 @@
 #!/bin/bash
+sudo apt update -y
 
 # Detect installed ROS version
 if [ -f "/opt/ros/noetic/setup.bash" ]; then
@@ -26,8 +27,8 @@ case $ROS_VERSION in
             echo "catkin_ws not found - skipping"
         fi
         ;;
-    2)  
-        # Build ROS2 workspaces  
+    2)
+        # Build ROS2 workspaces
         echo "Building ROS2 workspaces..."
         if [ -d "colcon_ws" ]; then
             cd colcon_ws && colcon build
