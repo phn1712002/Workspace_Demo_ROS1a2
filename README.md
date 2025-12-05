@@ -37,13 +37,13 @@ bash ./install_ws.sh
 3. Tải các thứ liên quan:
 ```bash
 # Đối với ROS1
-cd $CATKIN_WS/src/
+cd catkin_ws/src/
 bash git_clone.sh
 bash run_bash.sh
 ```
 ```bash
 # Đối với ROS22
-cd $COLCON_WS/src/
+cd colcon_ws/src/
 bash git_clone.sh
 bash run_bash.sh
 ```
