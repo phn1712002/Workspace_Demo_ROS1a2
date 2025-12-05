@@ -13,7 +13,7 @@ services:
 
     volumes:
       # Mount thư mục chứa docker-compose.yaml
-      - ./:/workspace
+      - ./:/home/ubuntu/workspace
 
     devices:
       - /dev/bus/usb:/dev/bus/usb
